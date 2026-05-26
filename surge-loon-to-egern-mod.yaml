@@ -13,7 +13,7 @@ body_rewrites:
       find: surge:///install-module\?url=
       replace: egern:///modules/new?url=
   - response_regex:
-      match: ^loon\.103516\.xyz\/Plugin
+      match: ^raw\.githubusercontent\.com\/sooyaaabo\/LoonLab\/.*\/Plugin\/.*\.json$
       find: loon://import\?plugin=
       replace: egern:///modules/new?url=
   - response_regex:
@@ -30,6 +30,6 @@ mitm:
       - pluginhub.kelee.one
       - hub.kelee.one
       - surge.qingr.moe
-      - loon.103516.xyz
+      - raw.githubusercontent.com/sooyaaabo/LoonLab/
       - kelvinlab.wuyra.com
 
