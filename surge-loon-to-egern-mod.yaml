@@ -13,15 +13,15 @@ body_rewrites:
       find: surge:///install-module\?url=
       replace: egern:///modules/new?url=
   - response_regex:
-      match: https://loon\.103516\.xyz/
+      match: ^loonlab\.103516\.xyz\/Plugin
       find: loon://import\?plugin=
       replace: egern:///modules/new?url=
   - response_regex:
-      match: https://kelvinlab\.wuyra\.com/
+      match:  ^kelvinlab\.wuyra\.com\/list\.json$
       find: loon://import\?plugin=
       replace: egern:///modules/new?url=
   - response_regex:
-      match: https://kelvinlab\.wuyra\.com/
+      match: ^kelvinlab\.wuyra\.com\/list\.json$
       find: surge:///install-module\?url=
       replace: egern:///modules/new?url=
 mitm:
@@ -30,6 +30,6 @@ mitm:
       - pluginhub.kelee.one
       - hub.kelee.one
       - surge.qingr.moe
-      - loon.103516.xyz
+      - loonlab.103516.xyz
       - kelvinlab.wuyra.com
 
