@@ -13,7 +13,7 @@ body_rewrites:
       find: surge:///install-module\?url=
       replace: egern:///modules/new?url=
   - response_regex:
-      match: ^loonlab\.103516\.xyz\Plugin/
+      match: ^loonlab\.103516\.xyz\Plugin/index.html$
       find: loon://import\?plugin=
       replace: egern:///modules/new?url=
   - response_regex:
