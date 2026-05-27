@@ -1,6 +1,6 @@
 name: 插件模块跳转
 description:
- 色鸡 可莉插件中心等跳转到 Egern改，参考：IBL3ND 
+ 色鸡 可莉插件中心跳转到 Egern改，原作者IBL3ND
 icon: https://iili.io/BDPVJ1I.png
 homepage: https://hub.kelee.one
 body_rewrites:
@@ -11,6 +11,10 @@ body_rewrites:
   - response_regex:
       match: https://surge\.qingr\.moe/
       find: surge:///install-module\?url=
+      replace: egern:///modules/new?url=
+  - response_regex:
+      match: ^loonlab\.103516\.xyz\Plugin/index.html$
+      find: loon://import\?plugin=
       replace: egern:///modules/new?url=
   - response_regex:
       match:  ^kelvinlab\.wuyra\.com\/list\.json$
@@ -26,5 +30,6 @@ mitm:
       - pluginhub.kelee.one
       - hub.kelee.one
       - surge.qingr.moe
+      - loonlab.103516.xyz
       - kelvinlab.wuyra.com
 
