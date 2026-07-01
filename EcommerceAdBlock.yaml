@@ -24,9 +24,7 @@ DOMAIN,nr-op.elemecdn.com,REJECT
 
 # ==================== 其他电商 ====================
 DOMAIN,b.appsimg.com,REJECT                     # 唯品会
-DOMAIN-SUFFIX,poizon.com,REJECT                 # 得物
 DOMAIN,ad.suning.com,REJECT                     # 苏宁
-DOMAIN,edith.xiaohongshu.com,REJECT             # 小红书
 
 # ==================== 全局兜底 ====================
 IP-CIDR,103.37.155.60/32,REJECT
