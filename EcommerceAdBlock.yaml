@@ -26,8 +26,6 @@ DOMAIN,nr-op.elemecdn.com,REJECT
 DOMAIN,b.appsimg.com,REJECT                     # 唯品会
 DOMAIN,ad.suning.com,REJECT                     # 苏宁
 
-# ==================== 全局兜底 ====================
-IP-CIDR,103.37.155.60/32,REJECT
 
 [Rewrite]
 # ================= JQ 数据处理 =================
