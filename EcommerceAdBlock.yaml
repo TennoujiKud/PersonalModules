@@ -10,6 +10,7 @@ DOMAIN,ad.3.cn,REJECT
 DOMAIN,ad.jd.com,REJECT
 DOMAIN,static.360buyimg.com,REJECT
 
+
 # ==================== 美团 & 大众点评 ====================
 DOMAIN,portal-portm.meituan.com,REJECT
 DOMAIN,metrics-picture.d.meituan.net,REJECT
@@ -34,10 +35,12 @@ IP-CIDR,103.37.155.60/32,REJECT
 # ================= JQ 数据处理 =================
 # 美团
 http-response-jq ^https:\/\/rms\.meituan\.com\/api\/v\d\/rmsmina\/c\/queryShopPortalInfo\? 'delpaths([["data","popUpWindows"]])'
+# 京东    
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
 
 [Script]
 # JD 去广告脚本
 JD_Script = type=http-response, pattern=^https:\/\/(api|jxapi)\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome), script-path=https://kelee.one/Resource/JavaScript/JD/JD_remove_ads.js, requires-body=true
 
 [MITM]
-hostname =, *.jd.com, *.meituan.com, *.dianping.com
+hostname =, *.jd.com, *.meituan.com, *.dianping.com, m.360buyimg.com
